@@ -6,6 +6,11 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [status, setStatus] = useState("Maybe");
+
+  const setYes = () => setStatus("Yes");
+  const setNo = () => setStatus("No");
+  const setMaybe = () => setStatus("Maybe");
 
   return (
     <>
@@ -22,6 +27,10 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <p />
+        <button onClick={() => {}}>Is it prime: {status}</button>
+        <p />
+        <Link to="/info">What does Prime mean?</Link>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
